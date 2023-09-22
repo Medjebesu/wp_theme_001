@@ -1,0 +1,65 @@
+#profiles{
+    display: grid;
+    margin: 20px 40px;
+    row-gap: 10px;
+    column-gap: 20px;
+}
+
+#skilsheet{
+    grid-column: 1 / 3;
+    grid-row: 1;
+}
+#skilsheet table{
+    width: 95%;
+    margin: 10px 10px 10px 20px;
+}
+#skilsheet table tbody tr td p{
+    clear: none;
+    color: #FF0000;
+    font-size: 0.75rem;
+    margin: 0 0 5px 0;
+}
+
+#skilsheet table tbody tr td:nth-of-type(n+2) {
+    text-align: center;
+    font-size: 1.3rem;
+}
+
+#skilchart{
+    grid-column: 3;
+    grid-row: 1;
+}
+
+#skilchart img{
+    width: 90%;
+    object-fit:contain;
+}
+
+#skilchart div{
+    border-style: solid;
+    border-color: coral;
+    padding: 10px;
+    margin-right: 20px;
+    text-align: center;
+}
+
+#skilchart p{
+    font-size: 0.75rem;
+}
+
+#history{
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+#history div{
+    margin: 10px 20px;
+}
+#history table{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#history td ul{
+    margin: 5px 10px;
+    justify-content: left;
+}

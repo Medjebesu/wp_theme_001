@@ -1,0 +1,6 @@
+.gallery_list{
+    grid-template-columns: repeat(auto-fit, 240px);
+    grid-auto-rows: 360px;
+    column-gap: 20px;
+    row-gap: 30px;
+}

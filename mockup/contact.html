@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<head>
+    <title>MedjeWorks -Contact-</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/subpage.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <span id="nav_logo"><a href="index.html"><img src="images/logo.svg" alt="MedjeWorks"></a></span>
+                <ul>
+                    <a href="profile.html">
+                        <li id="nav_profile">Profile</li>
+                    </a>
+                    <a href="gallery.html">
+                        <li id="nav_gallery">Gallery</li>
+                    </a>
+                    <a href="blog.html">
+                        <li id="nav_blog">Blog</li>
+                    </a>
+                    <a href="contact.html">
+                        <li id="nav_contact">Contact</li>
+                    </a>
+                </ul>
+            </nav>
+            <hgroup id="header_main">
+                <h1>Contact</h1>
+            </hgroup>
+            <div id="breadcrumb">
+                <a href="index.html">Home</a> &gt; Contact
+            </div>
+        </header>
+        <main>
+            <section id="main_content">
+                <h2>Contact</h2>
+                <div id="content_header">
+                    <div>
+                        <p>Contact Form</p>
+                    </div>
+                </div>
+                <div id="caution">
+                    <strong>注意事項</strong>
+                    <ul>
+                        <li>他者への誹謗中傷に当たるような内容はご遠慮下さい。</li>
+                    </ul>
+                </div>
+                <div id="contact_form">
+                    <form action="#" method="post">
+                        <div class="form_item">
+                            <label for="name">お名前 :</label>
+                            <input type="text" name="nametext" id="name" size="25em" maxlength="40" placeholder="例:森乃 クマ子">
+                        </div>
+                        <div class="form_item">
+                            <label for="email" size="">メールアドレス :</label>
+                            <input type="email" name="emailtext" id="email" size="25em" maxlength="319" placeholder="例:example@mail.jp">
+                        </div>
+                        <div class="form_item">
+                            <label for="subject">ご用件 :</label>
+                            <select name="subject" id="subject">
+                                <optgroup label="お気持ち">
+                                    <option>コンテンツへの感想</option>
+                                </optgroup>
+                                <optgroup label="サイトへの要望・報告">
+                                    <option>改善の要望</option>
+                                    <option>不具合の報告</option>
+                                </optgroup>
+                                <optgroup label="作業の依頼">
+                                    <option>作業の依頼</option>
+                                </optgroup>
+                                <option selected></option>
+                            </select>
+                        </div>
+                        <div class="form_item">
+                            <label for="object">内容 :</label>
+                            <textarea name="object" id="object" rows="15"></textarea>
+                        </div>
+                        <div class="form_item">
+                            <ul class="form_button_list">
+                                <li><button type="reset">リセット</button></li>
+                                <li><button type="submit">送信</button></li>
+                            </ul>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div id="footer_links">
+                <ul>
+                    <li>
+                        <a href="https://twitter.com/MedjeWorks">
+                            <img src="images/thirdparty/x/logo.svg" width="24" height="24" alt="twitter">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Medjebesu">
+                            <img src="images/thirdparty/github/github-mark-white.svg" width="26" height="26" alt="github">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <p id="copy_rights">©MedjeWorks 2023</p>
+        </footer>
+    </div>
+</body>
