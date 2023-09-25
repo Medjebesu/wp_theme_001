@@ -19,20 +19,41 @@ header{
 }
 
 #nav_logo{
+    position: relative;
+    overflow: hidden;
     float: left;
-    width: 185px;
-    height: 50px;
+    box-sizing: border-box;
+}
+
+#nav_logo img {
+    display: block;
+    position: relative;
+    margin:5px 15px;
+    width: 275px;
+    height: 100%;
+    z-index: 2;
+}
+
+#logo_back_decoration{
+    position: absolute;
+    top: 80%;
+    left: 22%;
+    width: 75%;
+    height: 15%;
+    background-color: #FFEDB7;
+    border-radius: 85%;
+    z-index: 1;
 }
 
 nav ul{
     list-style-type: none;
     margin: 0;
-    padding-left: 160px;
+    padding-left: 50px;
     overflow: hidden;
 }
 nav ul li{
     float: left;
-    width: 160px;
+    width: 130px;
     height: 50px;
     line-height: 50px;
     text-align: center;
