@@ -1,10 +1,18 @@
 <?php
 /* 'announceカテゴリを除外して取得する' */
-$args = array(
-
-    'order'            => 'DESC',
-    'category__not_in' => array( get_cat_ID( 'announce' ) )
-);
+$announce_catid = get_cat_ID( 'announce' );
+$args = null;
+if($announce_catid != 0){
+    $args = array(
+        'order'            => 'DESC',
+        'category__not_in' => array($announce_catid)
+    );
+}
+else {
+    $args = array(
+        'order'            => 'DESC'
+    );
+}
 $query_posts = new WP_Query( $args );
 
 if( $query_posts->have_posts() ): 
