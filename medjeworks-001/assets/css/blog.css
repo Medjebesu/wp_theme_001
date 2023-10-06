@@ -1,0 +1,144 @@
+/* 外枠grid設定 */
+main {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: auto max(20vw, 240px);
+}
+main h2{
+    grid-column: 1/3;
+    grid-row: 1;
+}
+
+#blog_content{
+    grid-column: 1;
+    grid-row: 2 / 4;
+}
+
+#sidebar{
+    grid-column: 2;
+    grid-row: 2;
+}
+#blog_navigation{
+    grid-column: 1 / 3;
+    grid-row: 4;
+}
+
+#web_adds{
+    grid-column: 1 / 3;
+    grid-row: 5;
+}
+
+/* 各セクション内設定 */
+.blog_list{ /* .content_card_listの調整 */
+    box-sizing: border-box;
+    max-width: 100%;
+    grid-template-columns: repeat(auto-fit, 200px);
+    grid-auto-rows: 300px;
+    column-gap: 10px;
+    row-gap: 20px;
+}
+
+.article_wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #088551;
+    border-radius: 5px;
+    padding: 20px 20px;
+}
+
+#article_header{
+    text-align: right;
+    color: #888888;
+    padding: 1rem 1rem 0 0;
+}
+
+article {
+    /* width: 100%; */
+    /* height: 100%; */
+    background-color: #fffee2;
+    padding: 10px;
+}
+
+#blog_category_list{
+    margin-top: 5rem;
+    list-style-type: none;
+}
+#blog_category_list li {
+    background-color: #51D941;
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+
+#blog_category_list li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+#sidebar{
+    box-sizing: border-box;
+    background-color: #51D941; /*#088551;*/
+    border-style: solid;
+    border-color: coral;
+    border-radius: 5px;
+    color: #666666; /*#ffffff;*/
+}
+
+#short_profile{
+    width: 100%;
+    text-align: center;
+}
+
+#short_profile img{
+    display: block;
+    background-image: url(../images/profile_back_autamn.png);
+    background-size: contain;
+    border-style: solid;
+    border-color: #888888;
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+#widget_list {
+    margin-top: 20px;
+    padding: 10px;
+    padding-bottom: auto;
+}
+
+#widget_list h3{
+    margin-bottom: 10px;
+}
+
+#widget_list ul{
+    margin-top: 10px;
+    display: inline-block;
+}
+
+#widget_list ul li{
+    justify-content: left;
+}
+
+#blog_navigation{
+    margin-top: 20px;
+}
+
+#blog_navigation ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+#blog_navigation ul li{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+#web_adds{
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3.5rem;
+}
