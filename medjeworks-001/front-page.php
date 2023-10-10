@@ -27,10 +27,12 @@
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </li>
             <?php endwhile; ?>
+        </ul>
+        <a id="news_archive" href="<?php echo home_url() . '/category/announce';?>">お知らせ一覧</a>
         <?php else: ?>
             <li>お知らせはありません</li>
-        <?php endif; ?>
         </ul>
+        <?php endif; ?>
     </section>
     <section id="contents_list">
         <h2>Contents</h2>

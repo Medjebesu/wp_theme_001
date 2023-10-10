@@ -105,6 +105,7 @@ td {
     height: 135px;
     object-fit: cover;
     margin: auto;
+    background-color: #ffffff;
     border-style: solid;
     border-color: darkgrey;
 }
