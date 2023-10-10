@@ -1,4 +1,10 @@
 <?php get_header(); ?>
+    <hgroup id="header_main">
+        <h1>MedjeWorks</h1>
+        <p><?php bloginfo('description'); ?></p>
+    </hgroup>
+</header>
+
 <main>
     <section id="news">
         <h2>News</h2>

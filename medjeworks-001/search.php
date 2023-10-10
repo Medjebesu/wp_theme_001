@@ -1,19 +1,29 @@
 <?php get_header(); ?>
+    <hgroup id="header_main">
+        <h1>Search</h1>
+    </hgroup>
+    <div id="breadcrumb">
+        <a href="<?php echo home_url(); ?>">Home</a> &gt; 検索結果: 「<?php the_search_query(); ?>」
+    </div>
+</header>
+
 <main>
     <h2>Search result: 「<?php the_search_query(); ?>」</h2>
     <section id="blog_content">
         <?php if(have_posts()):?>
         <?php 
+        $hit_count = 0;
         while(have_posts()) : the_post(); ?>
         <?php 
         if( ($post->post_type == 'page') or (get_the_category()[0]->cat_name == 'announce')){
             continue;
         }
         else{ 
-            if($hit_count == 0): ?>
+            if($hit_count == 0):
+        ?>
         <ul class="content_card_list blog_list">
-            <?php
-            $hit_count++;
+        <?php
+                $hit_count++;
             endif;
         }
         ?>

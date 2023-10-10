@@ -1,4 +1,12 @@
 <?php get_header(); ?>
+    <hgroup id="header_main">
+        <h1>Announce</h1>
+    </hgroup>
+    <div id="breadcrumb">
+        <a href="<?php echo home_url(); ?>">Home</a> &gt; <a href="">おしらせ</a> &gt; <?php the_title(); ?>
+    </div>
+</header>
+
 <main>
     <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
