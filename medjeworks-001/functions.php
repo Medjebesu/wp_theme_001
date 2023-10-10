@@ -75,6 +75,11 @@ add_action( 'wp_print_styles', 'add_stylesheet');
 ?>
 
 <?php
+/* カスタムロゴ選択用メニューを追加 */
+add_theme_support('custom-logo');
+?>
+
+<?php
 /* オリジナルカスタマイザメニューの追加 */
 function customizer_register($wp_customize) {
 

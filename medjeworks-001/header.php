@@ -45,12 +45,17 @@
     <div class="wrapper">
         <header>
             <nav>
-                <a href="<?php echo home_url(); ?>">
-                    <div id="nav_logo">
+                <div id="nav_logo">
+                    <?php
+                    if(has_custom_logo()) : the_custom_logo();
+                    ?>
+                    <?php else :?>
+                        <a href="<?php echo home_url(); ?>">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="MedjeWorks">
-                        <div id="logo_back_decoration"></div>
-                    </div>
-                </a>
+                        </a>
+                    <?php endif; ?>
+                    <div id="logo_back_decoration"></div>
+                </div>
 
                 <?php
                 /* ナビゲーションメニュー */
