@@ -78,10 +78,17 @@ add_action( 'wp_print_styles', 'add_stylesheet');
 /* オリジナルカスタマイザメニューの追加 */
 function customizer_register($wp_customize) {
 
-    /* セクション定義 */
-    $wp_customize->add_section('original_section', array(
-        'title' => 'Additional Settings',
-        'priority' => 150,
+    /* パネル */
+    $wp_customize->add_panel('theme_panel', array(
+        'title' => 'Theme settings',
+        'priority' => 100,
+    ));
+    
+    /* セクション */
+    $wp_customize->add_section('footer_section', array(
+        'title' => 'Footer settings',
+        'priority' => 100,
+        'panel' => 'theme_panel'
     ));
 
     /* 設定値定義: Copyright */
@@ -91,9 +98,21 @@ function customizer_register($wp_customize) {
     $wp_customize->add_control( 'custom_copyright', array(
         'settings' => 'custom_copyright',
         'label' => 'Copy right',
-        'section' => 'original_section',
+        'section' => 'footer_section',
         'type' => 'text',
     ));
+
+    /* 設定値定義: Copyright(期間) */
+    $wp_customize->add_setting('custom_copyright_year', array(
+        'type' => 'option',
+    ));
+    $wp_customize->add_control( 'custom_copyright_year', array(
+        'settings' => 'custom_copyright_year',
+        'label' => 'From year',
+        'section' => 'footer_section',
+        'type' => 'text',
+    ));
+
 }
 add_action('customize_register', 'customizer_register');
 ?>

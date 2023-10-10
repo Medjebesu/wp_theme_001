@@ -10,13 +10,13 @@
             ?>
             <p id="copy_rights">
             <?php
-            	if (get_theme_mod('my_colors_header_background')) {
-                    echo get_theme_mod( 'my_colors_header_background' );
-                }
-                else {
-                    echo '©MedjeWorks 2023'
-                }
-            ?>    
+                $copyright = get_option('custom_copyright', '©MedjeWorks');
+                if (empty($copyright)) $copyright = '©MedjeWorks';
+                
+                $copyright_year = get_option('custom_copyright_year', '2023'); 
+                if (empty($copyright_year)) $copyright_year = '2023';
+                echo $copyright . ' ' . $copyright_year;
+            ?>
             </p>
         </footer>
     </div>
