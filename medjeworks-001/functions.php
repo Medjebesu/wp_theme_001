@@ -73,3 +73,27 @@ function add_stylesheet() {
 }
 add_action( 'wp_print_styles', 'add_stylesheet');
 ?>
+
+<?php
+/* オリジナルカスタマイザメニューの追加 */
+function customizer_register($wp_customize) {
+
+    /* セクション定義 */
+    $wp_customize->add_section('original_section', array(
+        'title' => 'Additional Settings',
+        'priority' => 150,
+    ));
+
+    /* 設定値定義: Copyright */
+    $wp_customize->add_setting('custom_copyright', array(
+        'type' => 'option',
+    ));
+    $wp_customize->add_control( 'custom_copyright', array(
+        'settings' => 'custom_copyright',
+        'label' => 'Copy right',
+        'section' => 'original_section',
+        'type' => 'text',
+    ));
+}
+add_action('customize_register', 'customizer_register');
+?>

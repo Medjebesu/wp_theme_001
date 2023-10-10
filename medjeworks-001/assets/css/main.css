@@ -86,22 +86,33 @@ hgroup {
     color: #ffffff;
 }
 
+h2 {
+    display: block;
+    font-size: 1.5rem;
+    margin: 0.83em 0;
+}
+
 footer{
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #088551;
     position: absolute;
     bottom: 0;
 }
+#footer-sns-container{
+    width: 100%;
+    bottom: 1.8rem;
+    position: absolute;
+    background-color: #088551;
+}
 
-footer div ul {
+#footer-sns-container ul {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
     text-align: center;
 }
-footer div ul li{
+#footer-sns-container ul li{
     height: 2.75rem;
     margin: 0.75rem 1rem 0.25rem 0;
     padding: 0;
@@ -109,19 +120,22 @@ footer div ul li{
     color: #ffffff;
     display: inline-block;
 }
-footer div ul li a{
+#footer-sns-container ul li a{
     text-decoration: none;
     color: #ffffff;
 }
-footer div ul li a:hover{
+#footer-sns-container ul li a:hover{
     color: #FFA629;
 }
 
 #copy_rights{
     margin: 0;
-    padding: 5px 0;
+    padding: 0.4rem 0;
+    line-height: 1rem;
     width: 100%;
     background-color: #000000;
     color: #ffffff;
     text-align: center;
+    position: absolute;
+    bottom: 0rem;
 }
