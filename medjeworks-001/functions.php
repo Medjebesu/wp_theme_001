@@ -66,10 +66,11 @@ add_shortcode('loadPHP', 'loadThemePHP');
  */
 function add_stylesheet() {
     // ブログトップページ
-    if (is_page('blog')) {
-        wp_register_style('blog-style', get_bloginfo('template_directory') . '/assets/css/blog.css');
-        wp_enqueue_style('blog-style');
-    }
+    /* 固定ページ用ヘッダ読み込み処理で加工したので不要 */
+    //if (is_page('blog')) {
+    //    wp_register_style('blog-style', get_bloginfo('template_directory') . '/assets/css/blog.css');
+    //    wp_enqueue_style('blog-style');
+    //}
 }
 add_action( 'wp_print_styles', 'add_stylesheet');
 ?>

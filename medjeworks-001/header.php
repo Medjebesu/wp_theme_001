@@ -25,6 +25,9 @@
         elseif (is_search()){
             get_template_part('header-head', 'search');
         }
+        elseif (is_page()){
+            get_template_part('header-head', 'page');
+        }
     }
     ?>
 

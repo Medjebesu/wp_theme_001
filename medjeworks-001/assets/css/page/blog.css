@@ -90,7 +90,7 @@ article {
 
 #short_profile img{
     display: block;
-    background-image: url(../images/profile_back_autamn.png);
+    background-image: url(../../images/profile_back_autamn.png);
     background-size: contain;
     border-style: solid;
     border-color: #888888;
