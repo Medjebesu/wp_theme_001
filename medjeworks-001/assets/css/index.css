@@ -48,6 +48,9 @@
 }
 #news_archive{
     display: block;
+    width: 7rem;
+    margin: 0 2rem 0 auto;
+    padding: 5px;
     text-align: right;
     font-size: 1em;
     text-decoration: none;
