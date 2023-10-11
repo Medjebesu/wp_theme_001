@@ -1,0 +1,88 @@
+#content_header{
+    margin: 0 40px 0 40px;
+    justify-items: center;
+}
+
+#content_header div{
+    width: clamp(480px, 50%, 960px);
+    height: clamp(360px, 30vw, 640px);
+    margin: 20px auto;
+    background-image: url(../images/content_sambnail.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#content_header p{
+    overflow: hidden;
+    font-size: 54px;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    line-height: clamp(360px, 30vw, 640px);
+}
+
+#caution{
+    margin: 20px 40px 20px 40px;
+    border-style: solid;
+    border-color: chocolate;
+}
+
+#contact_form{
+    overflow: hidden;
+    background-color: #088551;
+    border-radius: 5px;
+    margin: 0 40px 0 40px;
+    padding: 20px;
+    box-shadow: rgba(0,0,0,0.7) 3px 3px 10px ;
+    min-width: 80%;
+}
+
+.form_item{
+    margin: 10px;
+}
+
+.form_item label{
+    display: block;
+    float: left;
+    font-size: clamp(1rem, 2.0vw, 1.5rem);
+    width:  clamp(8rem, 30%, 12rem);
+    text-align: right;
+    padding-right: 20px;
+    color: #ffffff;
+}
+
+.form_item input{
+    display:block;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+}
+
+.form_item select{
+    display:block;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+}
+.form_item textarea{
+    display:block;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    width: 60%;
+    max-width: 100%;
+}
+
+.form_button_list{
+    display: grid;
+    margin-left: clamp(8rem, 30%, 12rem);
+    padding-left: 20px;
+    grid-template-columns: repeat(auto-fit, 150px);
+    column-gap: 10px;
+    list-style: none;
+    justify-content: left;
+}
+
+.form_button_list li{
+    height: 50px;
+}
+
+.form_button_list button{
+    display: block;
+    width: 150px;
+    height: 50px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
