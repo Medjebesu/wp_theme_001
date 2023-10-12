@@ -161,3 +161,15 @@ function customizer_register($wp_customize) {
 }
 add_action('customize_register', 'customizer_register');
 ?>
+
+<?php 
+/*
+ * プラグイン関連の設定
+ */
+
+/* Contact Form 7 の整形機能 OFF */
+add_filter('wpcf7_autop_or_not', 'custom_wpcf7_autop');
+function custom_wpcf7_autop(){
+    return false;
+}
+?>

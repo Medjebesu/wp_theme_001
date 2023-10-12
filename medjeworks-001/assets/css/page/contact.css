@@ -24,42 +24,63 @@
     margin: 20px 40px 20px 40px;
     border-style: solid;
     border-color: chocolate;
+    font-size: clamp(1rem, 1.8vw, 2rem);
 }
 
 #contact_form{
+    margin: 0 auto;
     overflow: hidden;
     background-color: #088551;
     border-radius: 5px;
     box-shadow: rgba(0,0,0,0.7) 3px 3px 10px;
-    padding: 0.75rem 2rem;
-    margin: 0 auto;
-    width: clamp(22.5rem, 41.4vw, 44.5rem);
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    padding: 0.75em 2em;
+    width: 44.5em;
 }
 
-#contact_form label{
-    font-size: clamp(1rem, 1.8vw, 2rem);
+.form_item{
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.form_item label{
+    display: block;
+    float: left;
+    width: 9em;
+    text-align: right;
+    padding-top: 0.1em;
+    padding-right: 1.5em;
     color: #ffffff;
 }
 
-#contact_form input{
-    font-size: clamp(1rem, 1.8vw, 2rem);
+.form_item input{
+    font-size: inherit;
     max-width: 100%;
-    margin: 0  0 1rem;
+    width: 30em;
 }
 
-#contact_form select{
-    font-size: clamp(1rem, 1.8vw, 2rem);
+.form_item select{
+    font-size: inherit;
 }
-#contact_form textarea{
-    font-size: clamp(1rem, 1.8vw, 2rem);
-    max-width: 100%;
-    min-width: 10rem
+.form_item textarea{
+    font-size: inherit;
+    width: 30em;
 }
 
-#contact_form input[type="submit"]{
+.form_button_list{
+    display: grid;
+    margin-left: 10.5em;
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, 8em);
+    column-gap: 1em;
+    list-style: none;
+    justify-content: left;
+}
+
+.form_button_list button{
+    display: block;
     width: 8em;
     height: 2.5em;
-    font-size: clamp(1rem, 1.8vw, 2rem);
+    font-size: inherit;
 }
 
 .wpcf7-not-valid-tip{
