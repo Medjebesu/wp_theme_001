@@ -88,12 +88,11 @@ add_shortcode('loadPHP', 'loadThemePHP');
  * 固定ページの追加CSS設定
  */
 function add_stylesheet() {
-    // ブログトップページ
-    /* 固定ページ用ヘッダ読み込み処理で加工したので不要 */
-    //if (is_page('blog')) {
-    //    wp_register_style('blog-style', get_bloginfo('template_directory') . '/assets/css/blog.css');
-    //    wp_enqueue_style('blog-style');
-    //}
+    // 問い合わせの確認ページと完了ページに同一スタイル適用
+    if (is_page('confirm') or is_page('thanks')) {
+        wp_register_style('blog-style', get_bloginfo('template_directory') . '/assets/css/page/contact.css');
+        wp_enqueue_style('blog-style');
+    }
 }
 add_action( 'wp_print_styles', 'add_stylesheet');
 ?>

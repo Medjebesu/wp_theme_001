@@ -51,10 +51,12 @@
     padding-right: 1.5em;
     color: #ffffff;
 }
+.form_item span{
+    color: #dc3232;
+}
 
 .form_item input{
     font-size: inherit;
-    max-width: 100%;
     width: 30em;
 }
 
@@ -64,6 +66,16 @@
 .form_item textarea{
     font-size: inherit;
     width: 30em;
+    max-width: 44.5em;
+    min-width: 5em;
+    min-height: 5em;
+}
+
+.confirm_value{
+    display: inline;
+    padding: 0.1em 0.5em;
+    background-color: #fffee2;
+    border-radius: 3px;
 }
 
 .form_button_list{
@@ -76,11 +88,10 @@
     justify-content: left;
 }
 
-.form_button_list button{
+.form_button_list .form_button{
     display: block;
     width: 8em;
     height: 2.5em;
-    font-size: inherit;
 }
 
 .wpcf7-not-valid-tip{
