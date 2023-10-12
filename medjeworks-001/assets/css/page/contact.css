@@ -59,7 +59,7 @@
 #contact_form input[type="submit"]{
     width: 8em;
     height: 2.5em;
-    font-size: clamp(2rem, 1.8vw, 2rem);
+    font-size: clamp(1rem, 1.8vw, 2rem);
 }
 
 .wpcf7-not-valid-tip{
