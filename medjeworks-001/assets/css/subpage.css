@@ -29,37 +29,20 @@ main{
     border-color: #FF7F50;
     border-style: solid;
     border-collapse: collapse;
-    thead{
-        border-color: #FF7F50;
-        border-style: inherit;
-        border-collapse: inherit;
-        tr > th{
-            border-color: #FF7F50;
-            border-style: inherit;
-            border-collapse: inherit;
-        }
-    }
-    tbody{
-        border-color: #FF7F50;
-        border-style: inherit;
-        border-collapse: inherit;
-        tr > td {
-            border-color: #FF7F50;
-            border-style: inherit;
-            border-collapse: inherit;    
-        }
-    }
 }
-th {
-    color: #FFA629;
-    background-color: #088551;
 
+.table_base thead tr > th{
     border: 2px #FF7F50 solid;
     padding: 10px 10px;
 }
-td {
+.table_base tbody tr > td {
     border: 2px #FF7F50 solid;
     padding: 5px 10px;
+}
+
+th {
+    color: #FFA629;
+    background-color: #088551;
 }
 
 .content_card_list{

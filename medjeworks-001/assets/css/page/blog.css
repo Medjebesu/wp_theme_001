@@ -117,6 +117,10 @@ article {
     justify-content: left;
 }
 
+#widget_list input{
+    max-width: 100%;
+}
+
 #blog_navigation{
     margin-top: 20px;
 }
