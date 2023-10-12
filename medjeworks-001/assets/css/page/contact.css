@@ -4,20 +4,20 @@
 }
 
 #content_header div{
-    width: clamp(480px, 50%, 960px);
-    height: clamp(360px, 30vw, 640px);
+    width: clamp(480px, 60vw, 960px);
+    height: clamp(360px, 45vw, 720px);
     margin: 20px auto;
-    background-image: url(../images/content_sambnail.png);
+    background-image: url(../../images/contact_header.png);
     background-size:cover;
     background-repeat: no-repeat;
 }
 #content_header p{
     overflow: hidden;
-    font-size: 54px;
+    font-size: 4rem;
     margin: 0;
     color: #ffffff;
     text-align: center;
-    line-height: clamp(360px, 30vw, 640px);
+    line-height: clamp(360px, 45vw, 720px);
 }
 
 #caution{
@@ -30,59 +30,42 @@
     overflow: hidden;
     background-color: #088551;
     border-radius: 5px;
-    margin: 0 40px 0 40px;
-    padding: 20px;
-    box-shadow: rgba(0,0,0,0.7) 3px 3px 10px ;
-    min-width: 80%;
+    box-shadow: rgba(0,0,0,0.7) 3px 3px 10px;
+    padding: 0.75rem 2rem;
+    margin: 0 auto;
+    width: clamp(22.5rem, 41.4vw, 44.5rem);
 }
 
-.form_item{
-    margin: 10px;
-}
-
-.form_item label{
-    display: block;
-    float: left;
-    font-size: clamp(1rem, 2.0vw, 1.5rem);
-    width:  clamp(8rem, 30%, 12rem);
-    text-align: right;
-    padding-right: 20px;
+#contact_form label{
+    font-size: clamp(1rem, 1.8vw, 2rem);
     color: #ffffff;
 }
 
-.form_item input{
-    display:block;
+#contact_form input{
     font-size: clamp(1rem, 1.8vw, 2rem);
-}
-
-.form_item select{
-    display:block;
-    font-size: clamp(1rem, 1.8vw, 2rem);
-}
-.form_item textarea{
-    display:block;
-    font-size: clamp(1rem, 1.5vw, 2rem);
-    width: 60%;
     max-width: 100%;
+    margin: 0  0 1rem;
 }
 
-.form_button_list{
-    display: grid;
-    margin-left: clamp(8rem, 30%, 12rem);
-    padding-left: 20px;
-    grid-template-columns: repeat(auto-fit, 150px);
-    column-gap: 10px;
-    list-style: none;
-    justify-content: left;
+#contact_form select{
+    font-size: clamp(1rem, 1.8vw, 2rem);
+}
+#contact_form textarea{
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    max-width: 100%;
+    min-width: 10rem
 }
 
-.form_button_list li{
-    height: 50px;
+#contact_form input[type="submit"]{
+    width: 8em;
+    height: 2.5em;
+    font-size: clamp(2rem, 1.8vw, 2rem);
 }
 
-.form_button_list button{
-    display: block;
-    width: 150px;
-    height: 50px;
-    font-size: clamp(1rem, 1.5vw, 2rem);
+.wpcf7-not-valid-tip{
+    background-color: #fcf952;
+}
+.wpcf7-response-output{
+    background-color: #fcf952;
+    color:#dc3232;
 }
