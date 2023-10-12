@@ -2,7 +2,6 @@
 
 <head>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css" type="text/css">
-    
     <?php 
     /* front-page専用<head>設定 */
     if (is_home()){
