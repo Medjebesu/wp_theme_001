@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <hgroup id="header_main">
-        <h1>MedjeWorks</h1>
+        <h1><?php bloginfo('name'); ?></h1>
         <p><?php bloginfo('description'); ?></p>
     </hgroup>
 </header>

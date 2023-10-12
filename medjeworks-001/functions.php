@@ -1,5 +1,5 @@
 <?php 
-add_action( 'wp_body_open', function() {
+add_action( 'wp_body_open', function(){
 /* ↓関数定義↓ */?>
 
 <?php 
@@ -8,17 +8,34 @@ add_action( 'wp_body_open', function() {
 ?>
 
 <?php 
-/* <title>関連の制御 */
+/*
+ * <title>関係の設定
+ */
 add_theme_support('title-tag');
+
+/* タイトル・説明の区切り文字設定 */
 add_filter('document_title_separator', 'set_document_title_separator');
 function set_document_title_separator($sep){
     $sep = '｜';
     return $sep;
 }
+
+/* タイトルにふりがなを設定する */
+function custom_add_sub_title($title){
+    $subtext = get_option('title_subtext', '');
+    if (!empty($subtext)){
+        if(is_home()) $title['title'] = $title['title'] . ' ('. $subtext .')';
+        else          $title['site']  = $title['site']  . ' ('. $subtext .')';
+    }
+    return $title;
+};
+add_filter('document_title_parts', 'custom_add_sub_title');
 ?>
 
 <?php 
-/* カスタムメニュー用設定 */
+/*
+ * カスタムメニュー用設定
+ */
 add_theme_support('menus');
 register_nav_menus(array(
     'header-navigation' => 'Header Navigation',
@@ -29,11 +46,17 @@ register_nav_menus(array(
 ?>
 
 <?php
-/* アイキャッチ画像用設定 */ 
-add_theme_support('post-thumbnails');
+/*
+ * オプション機能の割り当て
+ */
+add_theme_support('post-thumbnails');   /* 投稿時アイキャッチ画像設定有効化 */
+add_theme_support('custom-logo');       /* カスタムロゴ選択メニューを有効化 */
 ?>
 
 <?php 
+/*
+ * データ取得時の加工設定
+ */
 /* the_archive_title 余計な文字を削除 */
 add_filter('get_the_archive_title', function ($title) {
     if(is_archive()){
@@ -43,11 +66,11 @@ add_filter('get_the_archive_title', function ($title) {
     return $title;
 });
 ?>
-
 <?php 
 /*
- * 外部PHPを読み込むショートコード
+ * テーマ用ショートコード 
  */
+/* 外部PHPを読み込むショートコード */
 function loadThemePHP($args) {
     //$fileに引数をセット
     extract(shortcode_atts(array('file' => 'nothing.php'), $args));
@@ -76,11 +99,6 @@ add_action( 'wp_print_styles', 'add_stylesheet');
 ?>
 
 <?php
-/* カスタムロゴ選択用メニューを追加 */
-add_theme_support('custom-logo');
-?>
-
-<?php
 /* オリジナルカスタマイザメニューの追加 */
 function customizer_register($wp_customize) {
 
@@ -91,23 +109,44 @@ function customizer_register($wp_customize) {
     ));
     
     /* セクション */
-    $wp_customize->add_section('footer_section', array(
-        'title' => 'Footer settings',
+    $wp_customize->add_section('header_setting', array(
+        'title' => 'Header settings',
         'priority' => 100,
         'panel' => 'theme_panel'
     ));
+    $wp_customize->add_section('footer_setting', array(
+        'title' => 'Footer settings',
+        'priority' => 110,
+        'panel' => 'theme_panel'
+    ));
 
-    /* 設定値定義: Copyright */
+    /*
+     * Header Section
+     */
+     /* 設定値定義: タイトルのふりがな */
+     $wp_customize->add_setting('title_subtext', array(
+        'type' => 'option',
+    ));
+    $wp_customize->add_control( 'title_subtext', array(
+        'settings' => 'title_subtext',
+        'label' => 'Title subtext',
+        'section' => 'header_setting',
+        'type' => 'text',
+    ));
+
+    /*
+     * Footer Section
+     */
+     /* 設定値定義: Copyright */
     $wp_customize->add_setting('custom_copyright', array(
         'type' => 'option',
     ));
     $wp_customize->add_control( 'custom_copyright', array(
         'settings' => 'custom_copyright',
         'label' => 'Copy right',
-        'section' => 'footer_section',
+        'section' => 'footer_setting',
         'type' => 'text',
     ));
-
     /* 設定値定義: Copyright(期間) */
     $wp_customize->add_setting('custom_copyright_year', array(
         'type' => 'option',
@@ -115,7 +154,7 @@ function customizer_register($wp_customize) {
     $wp_customize->add_control( 'custom_copyright_year', array(
         'settings' => 'custom_copyright_year',
         'label' => 'From year',
-        'section' => 'footer_section',
+        'section' => 'footer_setting',
         'type' => 'text',
     ));
 
