@@ -81,8 +81,10 @@
 .form_button_list{
     display: grid;
     margin-left: 10.5em;
+    margin-bottom: 0;
     padding: 0;
     grid-template-columns: repeat(auto-fit, 8em);
+    grid-template-rows: 2.5em;;
     column-gap: 1em;
     list-style: none;
     justify-content: left;
