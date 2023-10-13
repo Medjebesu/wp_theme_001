@@ -52,7 +52,13 @@
     </section>
 
     <?php get_template_part('load', 'blogsidebar'); ?>
-            
+
+    <?php if(function_exists('wp_pagenavi')): ?>
+    <section id="list_navigation" class="pagenation">
+        <?php wp_pagenavi(); ?>
+    </section>
+    <?php endif;?> 
+
     <aside id="web_adds">
         <!-- <div>※広告用領域※</div> -->
     </aside>
