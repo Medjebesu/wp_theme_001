@@ -1,7 +1,8 @@
 <aside id="sidebar">
     <section id="short_profile">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/profile.png" width="180" height="240">
-            <p>ショートプロフィール文章</p>
+        <span id="author"><?php echo get_option('blog_author', 'No Name.');?></span>
+        <div id="profile"><?php echo get_option('blog_profile', 'No Profile.');?></div>
     </section>
     <section id="widget_list">
         <form action="<?php echo home_url('/'); ?>" method="get">

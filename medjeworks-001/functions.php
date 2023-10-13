@@ -113,9 +113,14 @@ function customizer_register($wp_customize) {
         'priority' => 100,
         'panel' => 'theme_panel'
     ));
+    $wp_customize->add_section('blogpart_setting', array(
+        'title' => 'Blog parts settings',
+        'priority' => 110,
+        'panel' => 'theme_panel'
+    ));
     $wp_customize->add_section('footer_setting', array(
         'title' => 'Footer settings',
-        'priority' => 110,
+        'priority' => 150,
         'panel' => 'theme_panel'
     ));
 
@@ -123,7 +128,7 @@ function customizer_register($wp_customize) {
      * Header Section
      */
      /* 設定値定義: タイトルのふりがな */
-     $wp_customize->add_setting('title_subtext', array(
+    $wp_customize->add_setting('title_subtext', array(
         'type' => 'option',
     ));
     $wp_customize->add_control( 'title_subtext', array(
@@ -131,6 +136,31 @@ function customizer_register($wp_customize) {
         'label' => 'Title subtext',
         'section' => 'header_setting',
         'type' => 'text',
+    ));
+
+    /*
+     * Blog parts Section
+     */
+    /* 著者名 */
+    $wp_customize->add_setting('blog_author', array(
+        'type' => 'option',
+    ));
+    $wp_customize->add_control( 'blog_author', array(
+        'settings' => 'blog_author',
+        'label' => 'Author',
+        'section' => 'blogpart_setting',
+        'type' => 'text',
+    ));
+
+    /* ブログプロフィール */
+    $wp_customize->add_setting('blog_profile', array(
+        'type' => 'option',
+    ));
+    $wp_customize->add_control( 'blog_profile', array(
+        'settings' => 'blog_profile',
+        'label' => 'Blog profile',
+        'section' => 'blogpart_setting',
+        'type' => 'textarea',
     ));
 
     /*
