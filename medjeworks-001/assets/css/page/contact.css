@@ -103,3 +103,14 @@
     background-color: #fcf952;
     color:#dc3232;
 }
+
+#recaptcha_pp{
+    margin: 1rem auto 0;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    padding: 0.75em 2em;
+    width: 44.5em;
+    text-align: center;
+}
+#recaptcha_pp p{
+    margin: 0 2rem;
+}
