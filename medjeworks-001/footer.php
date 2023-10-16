@@ -1,5 +1,13 @@
         <footer>
             <?php
+            /* フッターナビゲーション & サイト情報 */
+            $args = [
+                'theme_location' => 'footer-navigation',
+                'container' => 'div',
+                'container_id' => 'footer-nav-container',
+            ];
+            wp_nav_menu($args);
+
             /* SNSリンク */
             $args = [
                 'theme_location' => 'social-links',
