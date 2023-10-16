@@ -5,13 +5,12 @@
 </header>
 
 <main>
-    <h2>Archive : <?php the_archive_title(); ?></h2>
+    <h2>Category : <?php single_cat_title(); ?></h2>
     
     <section id="blog_content">
         <?php if( have_posts() ) : ?>
         <ul class="content_card_list blog_list">
             <?php while( have_posts() ) : the_post(); ?>
-            <?php if( is_archive() and (get_the_category()[0]->cat_name == 'announce' ) ) continue;?>
             <li>
                 <div class="content_card">
                     <a href="<?php the_permalink(); ?>">

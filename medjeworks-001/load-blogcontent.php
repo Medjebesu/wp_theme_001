@@ -40,6 +40,6 @@ if( $query_posts->have_posts() ):
 
 <?php if(function_exists('wp_pagenavi')): ?>
     <section id="list_navigation" class="pagenation">
-        <?php wp_pagenavi(); ?>
+        <?php wp_pagenavi(array('query' => $query_posts)); ?>
     </section>
 <?php endif;?> 
