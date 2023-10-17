@@ -25,27 +25,24 @@ main{
     box-sizing: border-box;
 }
 
-table{
-    border-color: coral;
+.table_base{
+    border-color: #FF7F50;
     border-style: solid;
     border-collapse: collapse;
 }
-thead{
-    background-color: #088551;
-    color: #FFA629;
-}
 
-th{
-    border-style: solid;
-    border-color: coral;
+.table_base thead tr > th{
+    border: 2px #FF7F50 solid;
     padding: 10px 10px;
 }
-
-td{
-    border-style: solid;
-    border-width: 2px;
-    border-color: coral;
+.table_base tbody tr > td {
+    border: 2px #FF7F50 solid;
     padding: 5px 10px;
+}
+
+th {
+    color: #FFA629;
+    background-color: #088551;
 }
 
 .content_card_list{
@@ -91,6 +88,7 @@ td{
     height: 135px;
     object-fit: cover;
     margin: auto;
+    background-color: #ffffff;
     border-style: solid;
     border-color: darkgrey;
 }

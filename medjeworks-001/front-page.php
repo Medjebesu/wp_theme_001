@@ -1,11 +1,17 @@
 <?php get_header(); ?>
+    <hgroup id="header_main">
+        <h1><?php bloginfo('name'); ?></h1>
+        <p><?php bloginfo('description'); ?></p>
+    </hgroup>
+</header>
+
 <main>
     <section id="news">
         <h2>News</h2>
         <ul>
         <?php 
         $args = array(
-            'posts_per_page'   => 5,
+            'posts_per_page'   => 3,
             'category_name'    => 'announce', 
             'order'            => 'DESC'
         );
@@ -20,11 +26,16 @@
                 </time>
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </li>
-            <?php endwhile; ?>
+            <?php
+            endwhile; 
+            wp_reset_postdata();
+            ?>
+        </ul>
+        <a id="news_archive" href="<?php echo home_url() . '/category/announce';?>">お知らせ一覧</a>
         <?php else: ?>
             <li>お知らせはありません</li>
-        <?php endif; ?>
         </ul>
+        <?php endif; ?>
     </section>
     <section id="contents_list">
         <h2>Contents</h2>

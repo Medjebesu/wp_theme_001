@@ -44,6 +44,21 @@
 }
 #news ul li a:hover{
     text-decoration: underline;
+    color: #888888;
+}
+#news_archive{
+    display: block;
+    width: 7rem;
+    margin: 0 2rem 0 auto;
+    padding: 5px;
+    text-align: right;
+    font-size: 1em;
+    text-decoration: none;
+    color: #000000;
+}
+#news_archive:hover{
+    text-decoration: underline;
+    color: #888888;
 }
 
 #contents_list {
@@ -67,6 +82,7 @@
     border-radius: 2%;
     box-shadow: rgba(0,0,0,0.7) 3px 3px 10px ;
     text-align: center;
+    font-size: 1.2rem;
 }
 
 #contents_list ul li a{
@@ -85,6 +101,7 @@
     height: 180px;
     object-fit: cover;
     margin: auto;
+    background-color: #ffffff;
     border-style: solid;
     border-color: darkgrey;
 }

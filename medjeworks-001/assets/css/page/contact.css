@@ -1,0 +1,116 @@
+#content_header{
+    margin: 0 40px 0 40px;
+    justify-items: center;
+}
+
+#content_header div{
+    width: clamp(480px, 60vw, 960px);
+    height: clamp(360px, 45vw, 720px);
+    margin: 20px auto;
+    background-image: url(../../images/contact_header.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+#content_header p{
+    overflow: hidden;
+    font-size: 4rem;
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+    line-height: clamp(360px, 45vw, 720px);
+}
+
+#caution{
+    margin: 20px 40px 20px 40px;
+    border-style: solid;
+    border-color: chocolate;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+}
+
+#contact_form{
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #088551;
+    border-radius: 5px;
+    box-shadow: rgba(0,0,0,0.7) 3px 3px 10px;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    padding: 0.75em 2em;
+    width: 44.5em;
+}
+
+.form_item{
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.form_item label{
+    display: block;
+    float: left;
+    width: 9em;
+    text-align: right;
+    padding-top: 0.1em;
+    padding-right: 1.5em;
+    color: #ffffff;
+}
+.form_item span{
+    color: #dc3232;
+}
+
+.form_item input{
+    font-size: inherit;
+    width: 30em;
+}
+
+.form_item select{
+    font-size: inherit;
+}
+.form_item textarea{
+    font-size: inherit;
+    width: 30em;
+    max-width: 44.5em;
+    min-width: 5em;
+    min-height: 5em;
+}
+
+.confirm_value{
+    display: inline;
+    padding: 0.1em 0.5em;
+    background-color: #fffee2;
+    border-radius: 3px;
+}
+
+.form_button_list{
+    display: grid;
+    margin-left: 10.5em;
+    margin-bottom: 0;
+    padding: 0;
+    grid-template-columns: repeat(auto-fit, 8em);
+    grid-template-rows: 2.5em;;
+    column-gap: 1em;
+    list-style: none;
+    justify-content: left;
+}
+
+.form_button_list .form_button{
+    display: block;
+    width: 8em;
+    height: 2.5em;
+}
+
+.wpcf7-not-valid-tip{
+    background-color: #fcf952;
+}
+.wpcf7-response-output{
+    background-color: #fcf952;
+    color:#dc3232;
+}
+
+#recaptcha_pp{
+    margin: 1rem auto 0;
+    font-size: clamp(1rem, 1.8vw, 2rem);
+    padding: 0.75em 2em;
+    width: 44.5em;
+    text-align: center;
+}
+#recaptcha_pp p{
+    margin: 0 2rem;
+}

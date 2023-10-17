@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/page/blog.css" type="text/css">

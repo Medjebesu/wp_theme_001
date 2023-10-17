@@ -1,0 +1,27 @@
+<div class="form_item">
+    <label for="your-name"><span>*</span>お名前:</label>
+    [text* your-name autocomplete:name id:your-name maxlength:50]
+</div>
+
+<div class="form_item">
+    <label for="your-email"><span>*</span>メールアドレス:</label>
+    [email* your-email autocomplete:email id:your-email maxlength:319]
+</div>
+
+<div class="form_item">
+    <label for="your-subject"><span>*</span>ご用件:</label>
+    [text* your-subject id:your-subject maxlength:100]
+</div>
+
+<div class="form_item">
+    <label for="your-message">内容:</label>
+    [textarea your-message id:your-message maxlength:1000]
+</div>
+    
+<div class="form_item">
+    <ul class="form_button_list">
+        <li><input type="reset" class="form_button" value="リセット"></li>
+        <li>[submit id:submit class:form_button "確認"]</li>
+    </ul>
+</div>
+[multistep multistep-confirm first_step "/contact/confirm/"]

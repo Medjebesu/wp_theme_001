@@ -1,4 +1,9 @@
-<?php get_header(); ?>
+<?php
+    get_header();
+    get_template_part('header-body', 'blog');
+?>
+</header>
+
 <main>
     <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
@@ -25,6 +30,12 @@
                 <?php endif; ?>
             </article>
         </div>
+
+        <div id="blog_discussion">
+            <?php comments_template(); ?>
+        </div>
+    </section>
+
     </section>
     <section id="blog_navigation">
         <ul>

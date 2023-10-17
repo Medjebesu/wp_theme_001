@@ -1,0 +1,90 @@
+#news_list{
+    margin: 40px;
+}
+#news_list ul{
+    list-style-type: none;
+    
+}
+#news_list ul li {
+    padding: 20px 0 20px 0;
+    font-size: 1.0rem;
+    height: 2rem;
+    border-bottom: 1px dotted;
+}
+#news_list ul li time{
+    display: block;
+    float: left;
+    width: 8em;
+    padding: 0 4em 0 1em;
+    text-align: right;
+}
+#news_list ul li a{
+    display: block;
+    font-size: 1.75em;
+    text-decoration: none;
+    color: #000000;
+}
+#news_list ul li a:hover{
+    text-decoration: underline;
+    color: #888888;
+}
+
+.article_wrapper{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #088551;
+    border-radius: 5px;
+    padding: 20px 20px;
+}
+
+#article_header{
+    text-align: right;
+    color: #888888;
+    padding: 1rem 1rem 0 0;
+}
+
+article {
+    /* width: 100%; */
+    /* height: 100%; */
+    background-color: #fffee2;
+    padding: 10px;
+}
+
+.wp-block-embed__wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+#announce_discussion{
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 2px solid #ff7f50;
+    border-radius: 3px;
+    background-color: #fffee2;
+}
+
+#announce_navigation{
+    margin-top: 20px;
+}
+
+#announce_navigation ul{
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+}
+
+#announce_navigation ul li{
+    display: block;
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+
+#web_adds{
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 3.5rem;
+}

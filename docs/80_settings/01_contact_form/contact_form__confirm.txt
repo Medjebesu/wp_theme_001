@@ -1,0 +1,27 @@
+<div class="form_item">
+    <label for="your-name"><span>*</span>お名前:</label>
+    <p class="confirm_value">[multiform "your-name"]</p>
+</div>
+
+<div class="form_item">
+    <label for="your-email"><span>*</span>メールアドレス:</label>
+    <p class="confirm_value">[multiform "your-email"]</p>
+</div>
+
+<div class="form_item">
+    <label for="your-subject"><span>*</span>ご用件:</label>
+    <p class="confirm_value">[multiform "your-subject"]</p>
+</div>
+
+<div class="form_item">
+    <label for="your-message">内容:</label>
+    <p class="confirm_value">[multiform "your-message"]</p>
+</div>
+    
+<div class="form_item">
+    <ul class="form_button_list">
+        <li>[previous class:form_button "戻る"]</li>
+        <li>[submit id:submit class:form_button "送信"]</li>
+    </ul>
+</div>
+[multistep multistep-thanks last_step send_email "/contact/thanks/"]

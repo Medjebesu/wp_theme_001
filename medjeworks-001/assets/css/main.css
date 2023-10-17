@@ -9,7 +9,7 @@ body {
 .wrapper{
     height: 100%;
     min-height: 100vh;
-    padding-bottom: 92px;
+    padding-bottom: 20.53rem; /* Footer領域高さ */
     position: relative;
     box-sizing: border-box;
 }
@@ -72,8 +72,6 @@ nav ul li a:hover{
     color: #FFA629;
 }
 
-
-
 hgroup {
     margin: 0;
 }
@@ -86,40 +84,101 @@ hgroup {
     color: #ffffff;
 }
 
+h2 {
+    display: block;
+    font-size: 1.5rem;
+    margin: 0.83em 0;
+}
+
 footer{
     width: 100%;
     margin: 0;
     padding: 0;
-    background-color: #088551;
     position: absolute;
     bottom: 0;
+    position: absolute;
+    bottom: 0rem;
 }
 
-footer div ul {
+#footer-nav-container{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #088551;
+}
+
+#footer-nav-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+#footer-nav-container li{
+    font-size: 1rem;
+}
+#footer-nav-container ul li a{
+    text-decoration: none;
+    color: #ffffff;
+}
+#footer-nav-container ul li  a:hover{
+    color: #FFA629;
+    text-decoration: underline;
+}
+
+#footer-nav-container > ul {
+    display: flex;
+    padding: 1rem;
+    margin: 0;
+}
+#footer-nav-container > ul > li{
+    display: inline-block;
+    margin: 0 auto;
+}
+#footer-nav-container > ul > li > a{
+    border-left: 0.3rem solid #51D941;
+    padding-left: 0.2rem;
+}
+
+#footer-nav-container > ul > li > ul {
+    display: block;
+    margin: 0.5rem;
+    padding-left: 1rem;
+    list-style-type: square;
+}
+#footer-nav-container > ul > li > ul > li{
+}
+#footer-nav-container > ul > li > ul a{
+    color: #aaaaaa;
+}
+
+#footer-sns-container{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: #044329;
+}
+
+#footer-sns-container ul {
     list-style-type: none;
     padding-left: 0;
-    margin: 0;
+    margin: 0 auto;
     text-align: center;
 }
-footer div ul li{
-    height: 2.75rem;
-    margin: 0.75rem 1rem 0.25rem 0;
+#footer-sns-container ul li{
+    margin: 1rem 0.5rem;
     padding: 0;
     font-size: 1.5rem;
     color: #ffffff;
     display: inline-block;
 }
-footer div ul li a{
+#footer-sns-container ul li a{
     text-decoration: none;
     color: #ffffff;
 }
-footer div ul li a:hover{
+#footer-sns-container ul li a:hover{
     color: #FFA629;
 }
 
 #copy_rights{
     margin: 0;
-    padding: 5px 0;
+    padding: 0.4rem 0;
+    line-height: 1rem;
     width: 100%;
     background-color: #000000;
     color: #ffffff;
