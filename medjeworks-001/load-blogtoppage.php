@@ -27,8 +27,10 @@
                 </a>
             </div>
         </li>
-
-        <?php endwhile; ?>
+        <?php
+            endwhile; 
+            wp_reset_postdata();
+        ?>
     </ul>
     <?php endif; ?>
 </section>

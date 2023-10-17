@@ -26,7 +26,10 @@
                 </time>
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </li>
-            <?php endwhile; ?>
+            <?php
+            endwhile; 
+            wp_reset_postdata();
+            ?>
         </ul>
         <a id="news_archive" href="<?php echo home_url() . '/category/announce';?>">お知らせ一覧</a>
         <?php else: ?>
