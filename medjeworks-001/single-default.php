@@ -30,6 +30,12 @@
                 <?php endif; ?>
             </article>
         </div>
+
+        <div id="blog_discussion">
+            <?php comments_template(); ?>
+        </div>
+    </section>
+
     </section>
     <section id="blog_navigation">
         <ul>

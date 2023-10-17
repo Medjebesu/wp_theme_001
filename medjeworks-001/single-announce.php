@@ -23,6 +23,7 @@
             </article>
         </div>
     </section>
+
     <section id="announce_navigation">
         <ul>
             <?php
@@ -41,6 +42,11 @@
         </ul>
     </section>
     <?php endwhile; ?>
+
+    <section id="announce_discussion">
+        <?php comments_template(); ?>
+    </section>
+
     <?php endif; ?>
     <aside id="web_adds">
         <!-- <div>※広告用領域※</div> -->
