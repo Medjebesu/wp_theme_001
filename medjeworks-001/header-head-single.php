@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/comments.css" type="text/css">
 <?php if (in_category(array('announce'))): ?>
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/announce.css" type="text/css">
 <?php else :?>

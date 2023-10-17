@@ -37,7 +37,6 @@ main h2{
 }
 
 
-
 /* 各セクション内設定 */
 .blog_list{ /* .content_card_listの調整 */
     box-sizing: border-box;
@@ -82,14 +81,6 @@ article {
 #blog_category_list li a{
     text-decoration: none;
     color: #ffffff;
-}
-
-#blog_discussion{
-    margin-top: 1rem;
-    padding: 1rem;
-    border: 2px solid #ff7f50;
-    border-radius: 3px;
-    background-color: #fffee2;
 }
 
 #sidebar{

@@ -31,9 +31,7 @@
             </article>
         </div>
 
-        <div id="blog_discussion">
-            <?php comments_template(); ?>
-        </div>
+        <?php comments_template(); ?>
     </section>
 
     </section>

@@ -3,7 +3,6 @@
 }
 #news_list ul{
     list-style-type: none;
-    
 }
 #news_list ul li {
     padding: 20px 0 20px 0;
@@ -53,14 +52,6 @@ article {
 .wp-block-embed__wrapper{
     display: flex;
     justify-content: center;
-}
-
-#announce_discussion{
-    margin-top: 1rem;
-    padding: 1rem;
-    border: 2px solid #ff7f50;
-    border-radius: 3px;
-    background-color: #fffee2;
 }
 
 #announce_navigation{

@@ -43,9 +43,7 @@
     </section>
     <?php endwhile; ?>
 
-    <section id="announce_discussion">
-        <?php comments_template(); ?>
-    </section>
+    <?php comments_template(); ?>
 
     <?php endif; ?>
     <aside id="web_adds">
