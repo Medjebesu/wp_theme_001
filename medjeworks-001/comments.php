@@ -1,9 +1,9 @@
+<?php if (have_comments()): ?>
 <section id="comments">
     <?php
     comment_form(array(
         'title_reply' => 'コメントフォーム',
     ));
-    if (have_comments()):
     ?>
     <ol>
         <?php 
@@ -13,8 +13,6 @@
         ?>
     </ol>
 
-    <?php 
-    paginate_comments_links();
-    endif;
-    ?>
+    <?php paginate_comments_links(); ?>
 </section>
+<?php endif; ?>

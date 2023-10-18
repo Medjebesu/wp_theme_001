@@ -6,14 +6,14 @@
 </header>
 
 <main>
-    <section id="news">
-        <h2>News</h2>
+    <section id="announce">
+        <h2>Announce</h2>
         <ul>
         <?php 
         $args = array(
-            'posts_per_page'   => 3,
-            'category_name'    => 'announce', 
-            'order'            => 'DESC'
+            'posts_per_page' => 3,
+            'post_type' => 'announce',
+            'order' => 'DESC'
         );
         $query_posts = new WP_Query( $args );
 
@@ -31,7 +31,7 @@
             wp_reset_postdata();
             ?>
         </ul>
-        <a id="news_archive" href="<?php echo home_url() . '/category/announce';?>">お知らせ一覧</a>
+        <a id="announce_archive" href="<?php echo home_url() . '/announce';?>">お知らせ一覧</a>
         <?php else: ?>
             <li>お知らせはありません</li>
         </ul>

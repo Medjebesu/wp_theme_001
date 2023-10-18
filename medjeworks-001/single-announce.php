@@ -3,7 +3,7 @@
         <h1>News</h1>
     </hgroup>
     <div id="breadcrumb">
-        <a href="<?php echo home_url(); ?>">Home</a> &gt; <a href="<?php echo home_url() . '/category/announce';?>">News</a> &gt; <?php the_title(); ?>
+        <a href="<?php echo home_url(); ?>">Home</a> &gt; <a href="<?php echo home_url() . '/announce';?>">Announce</a> &gt; <?php the_title(); ?>
     </div>
 </header>
 
@@ -32,7 +32,7 @@
             ?>
             <li><a href="<?php the_permalink($next_post); ?>">&lt;&lt; <?php echo get_the_title($next_post); ?></a></li>
             <?php endif; ?>
-            <li><a href="<?php echo home_url() . '/category/announce';?>">おしらせ一覧へ戻る</a></li>
+            <li><a href="<?php echo home_url() . '/announce';?>">おしらせ一覧へ戻る</a></li>
             <?php
                 $pre_post = get_previous_post(true);
                 if ($pre_post):
