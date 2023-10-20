@@ -1,9 +1,15 @@
-<?php if (have_comments()): ?>
+<?php if($post->comment_status == 'open'): ?>
 <section id="comments">
-    <?php
+    <?php 
+    /* コメントフォーム表示 */
     comment_form(array(
         'title_reply' => 'コメントフォーム',
     ));
+    ?>
+    
+    <?php
+    /* 投稿済みコメント表示 */
+    if (have_comments()):
     ?>
     <ol>
         <?php 
@@ -12,7 +18,11 @@
         ));
         ?>
     </ol>
-
+    <?php endif; ?>
     <?php paginate_comments_links(); ?>
-</section>
+
+<?php else: ?>
+<section id="comment_disable">
+    <strong>※この投稿へのコメントは制限されています。</strong>
 <?php endif; ?>
+</section>
