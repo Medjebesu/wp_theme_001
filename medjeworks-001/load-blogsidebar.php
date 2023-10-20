@@ -12,13 +12,9 @@
         </form>
         <h3>カテゴリ</h3>
         <ul>
-            <?php 
-                $announcecat = get_category_by_slug('announce');
-                if (isset($announcecat->cat_ID)) $exclude_cat = $announcecat->cat_ID;
-                else $exclude_cat = '';
+            <?php
                 $cat_args = [
                     'title_li' => '', // 見出し削除
-                    'exclude'  => $exclude_cat // お知らせ専用カテゴリを除外
                 ];
                 wp_list_categories($cat_args);
             ?>

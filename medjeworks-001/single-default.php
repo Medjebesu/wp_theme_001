@@ -38,14 +38,14 @@
     <section id="blog_navigation">
         <ul>
             <?php
-                $next_post = get_next_post(false, array(get_cat_ID('announce')));
+                $next_post = get_next_post();
                 if ($next_post):
             ?>
             <li><a href="<?php the_permalink($next_post); ?>">&lt;&lt; <?php echo get_the_title($next_post); ?></a></li>
             <?php endif; ?>
             
             <?php
-                $pre_post = get_previous_post(false, array(get_cat_ID('announce')));
+                $pre_post = get_previous_post();
                 if ($pre_post):
             ?>
             <li><a href="<?php the_permalink($pre_post); ?>"><?php echo get_the_title($pre_post); ?> &gt;&gt;</a></li>

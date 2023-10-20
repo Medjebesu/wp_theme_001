@@ -10,23 +10,9 @@
 <main>
     <h2>Search result: 「<?php the_search_query(); ?>」</h2>
     <section id="blog_content">
-        <?php if(have_posts()):?>
-        <?php 
-        $hit_count = 0;
-        while(have_posts()) : the_post(); ?>
-        <?php 
-        if( ($post->post_type == 'page') or (get_the_category()[0]->cat_name == 'announce')){
-            continue;
-        }
-        else{ 
-            if($hit_count == 0):
-        ?>
+        <?php if(have_posts()): ?>
         <ul class="content_card_list blog_list">
-        <?php
-                $hit_count++;
-            endif;
-        }
-        ?>
+            <?php while(have_posts()) : the_post(); ?>
             <li>
             <div class="content_card">
                 <a href="<?php the_permalink(); ?>">
@@ -41,11 +27,8 @@
                 </div>
             </li>
             <?php endwhile; ?>
-            <?php if($hit_count == 0) : ?>
-                <h3>該当する記事はありませんでした。</h3>
-            <?php else: ?>
         </ul>
-            <?php endif; ?>
+        <?php endif; ?>
         <?php else: ?>
         <h3>該当する記事はありませんでした。</h3>
         <?php endif; ?>
