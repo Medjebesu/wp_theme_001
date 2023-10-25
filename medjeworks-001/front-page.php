@@ -39,7 +39,7 @@
     </section>
     <section id="contents_list">
         <h2>Contents</h2>
-        <?php get_template_part('load', 'blogcontent'); ?>
+        <?php get_template_part('load', 'contentslist'); ?>
     </section>
 </main>
 <?php get_footer(); ?>
