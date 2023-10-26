@@ -31,7 +31,7 @@
     ?>
 
     <link rel="icon"       href="<?php echo get_template_directory_uri(); ?>/assets/images/icon-001.svg" type="image/svg+xml" size="any">
-
+    <?php get_option('aditional_tag_in_the_head_tag', ''); ?>
     <!-- 外部参照 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" type="text/css" />
     <?php wp_head(); ?>
