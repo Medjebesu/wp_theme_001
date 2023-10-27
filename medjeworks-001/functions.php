@@ -131,8 +131,9 @@ function customizer_register($wp_customize) {
     ));
 
     /*
-    * additional_head_tag_setting
+    * Additional_head_tag_setting
     */
+    /* <head>タグにテーマから追記する場合のtextarea */
     $wp_customize->add_setting('aditional_tag_in_the_head_tag', array(
         'type' => 'option',
     ));
@@ -141,6 +142,17 @@ function customizer_register($wp_customize) {
         'label' => 'Additional tag in <head>',
         'section' => 'additional_head_tag_setting',
         'type' => 'textarea',
+    ));
+
+    /* Twitter Card用の情報 */
+    $wp_customize->add_setting('twitter_card_Acount', array(
+        'type' => 'option',
+    ));
+    $wp_customize->add_control( 'twitter_card_Acount', array(
+        'settings' => 'twitter_card_Acount',
+        'label' => 'X(Twitter) Card Info: Acount *exclude "@"',
+        'section' => 'additional_head_tag_setting',
+        'type' => 'text',
     ));
 
     /*
