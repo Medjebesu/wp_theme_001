@@ -6,8 +6,8 @@
 </header>
 
 <main>
+    <h2>Announce</h2>
     <section id="announce">
-        <h2>Announce</h2>
         <ul>
         <?php 
         $args = array(
@@ -18,7 +18,8 @@
         $query_posts = new WP_Query( $args );
 
         if( $query_posts->have_posts() ): 
-            while( $query_posts->have_posts() ) : $query_posts->the_post(); ?>
+            while( $query_posts->have_posts() ) : $query_posts->the_post(); 
+        ?>
             <li>
                 <time datetime="<?php the_time('Y-m-d H:i'); ?>">
                     <?php the_time('Y年m月d日'); ?> <br>
@@ -37,8 +38,9 @@
         </ul>
         <?php endif; ?>
     </section>
+
+    <h2>Contents</h2>
     <section id="contents_list">
-        <h2>Contents</h2>
         <?php get_template_part('load', 'contentslist'); ?>
     </section>
 </main>

@@ -17,10 +17,6 @@
     line-height: 24px;
 }
 
-main{
-    padding:20px min(40px, 2vw);
-}
-
 #main_content {
     box-sizing: border-box;
 }

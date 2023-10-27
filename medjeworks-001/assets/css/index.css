@@ -17,9 +17,6 @@
     font-size: 1.5rem;
 }
 
-#announce{
-    margin: 40px;
-}
 #announce ul{
     list-style-type: none;
     /*width: 80%*/
@@ -31,14 +28,13 @@
     border-bottom: 1px dotted;
 }
 #announce ul li time{
-    display: block;
-    float: left;
+    display: inline-block;
     width: 10em;
     padding: 0 4em 0 1em;
     text-align: right;
 }
 #announce ul li a{
-    display: block;
+    display: inline-block;
     font-size: 1.75em;
     text-decoration: none;
     color: #000000;
@@ -61,10 +57,6 @@
 #announce_archive:hover{
     text-decoration: underline;
     color: #888888;
-}
-
-#contents_list {
-    margin: 40px;
 }
 
 #contents_list ul{
