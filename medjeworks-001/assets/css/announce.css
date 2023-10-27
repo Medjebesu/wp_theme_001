@@ -13,7 +13,7 @@
 #news_list ul li time{
     display: block;
     float: left;
-    width: 8em;
+    width: 10em;
     padding: 0 4em 0 1em;
     text-align: right;
 }
