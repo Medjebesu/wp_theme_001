@@ -1,21 +1,11 @@
 <?php
-/* 'announceカテゴリを除外して取得する' */
-$announce_catid = get_cat_ID( 'announce' );
-$args = null;
-if($announce_catid != 0){
     $args = array(
-        'order'            => 'DESC',
-        'category__not_in' => array($announce_catid)
+        'posts_par_page' => 6,
+        'order'          => 'DESC'
     );
-}
-else {
-    $args = array(
-        'order'            => 'DESC'
-    );
-}
-$query_posts = new WP_Query( $args );
+    $query_posts = new WP_Query( $args );
 
-if( $query_posts->have_posts() ): 
+    if( $query_posts->have_posts() ): 
 ?>
     <ul class="content_card_list blog_list">
     <?php while( $query_posts->have_posts() ): $query_posts->the_post(); ?>

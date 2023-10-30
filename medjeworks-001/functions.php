@@ -66,6 +66,7 @@ add_filter('get_the_archive_title', function ($title) {
     return $title;
 });
 ?>
+
 <?php 
 /*
  * テーマ用ショートコード 
@@ -108,6 +109,11 @@ function customizer_register($wp_customize) {
     ));
     
     /* セクション */
+    $wp_customize->add_section('additional_head_tag_setting', array(
+        'title' => 'Additional <head> settings',
+        'priority' => 50,
+        'panel' => 'theme_panel'
+    ));
     $wp_customize->add_section('header_setting', array(
         'title' => 'Header settings',
         'priority' => 100,
@@ -122,6 +128,31 @@ function customizer_register($wp_customize) {
         'title' => 'Footer settings',
         'priority' => 150,
         'panel' => 'theme_panel'
+    ));
+
+    /*
+    * Additional_head_tag_setting
+    */
+    /* <head>タグにテーマから追記する場合のtextarea */
+    $wp_customize->add_setting('aditional_tag_in_the_head_tag', array(
+        'type' => 'option',
+    ));
+    $wp_customize->add_control( 'aditional_tag_in_the_head_tag', array(
+        'settings' => 'aditional_tag_in_the_head_tag',
+        'label' => 'Additional tag in <head>',
+        'section' => 'additional_head_tag_setting',
+        'type' => 'textarea',
+    ));
+
+    /* Twitter Card用の情報 */
+    $wp_customize->add_setting('twitter_card_Acount', array(
+        'type' => 'option',
+    ));
+    $wp_customize->add_control( 'twitter_card_Acount', array(
+        'settings' => 'twitter_card_Acount',
+        'label' => 'X(Twitter) Card Info: Acount *exclude "@"',
+        'section' => 'additional_head_tag_setting',
+        'type' => 'text',
     ));
 
     /*

@@ -6,19 +6,20 @@
 </header>
 
 <main>
-    <section id="news">
-        <h2>News</h2>
+    <h2>Announce</h2>
+    <section id="announce">
         <ul>
         <?php 
         $args = array(
-            'posts_per_page'   => 3,
-            'category_name'    => 'announce', 
-            'order'            => 'DESC'
+            'posts_per_page' => 3,
+            'post_type' => 'announce',
+            'order' => 'DESC'
         );
         $query_posts = new WP_Query( $args );
 
         if( $query_posts->have_posts() ): 
-            while( $query_posts->have_posts() ) : $query_posts->the_post(); ?>
+            while( $query_posts->have_posts() ) : $query_posts->the_post(); 
+        ?>
             <li>
                 <time datetime="<?php the_time('Y-m-d H:i'); ?>">
                     <?php the_time('Y年m月d日'); ?> <br>
@@ -31,15 +32,16 @@
             wp_reset_postdata();
             ?>
         </ul>
-        <a id="news_archive" href="<?php echo home_url() . '/category/announce';?>">お知らせ一覧</a>
+        <a id="announce_archive" href="<?php echo home_url() . '/announce';?>">お知らせ一覧</a>
         <?php else: ?>
             <li>お知らせはありません</li>
         </ul>
         <?php endif; ?>
     </section>
+
+    <h2>Contents</h2>
     <section id="contents_list">
-        <h2>Contents</h2>
-        <?php get_template_part('load', 'blogcontent'); ?>
+        <?php get_template_part('load', 'contentslist'); ?>
     </section>
 </main>
 <?php get_footer(); ?>

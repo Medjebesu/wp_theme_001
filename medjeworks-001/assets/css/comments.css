@@ -5,3 +5,17 @@
     border-radius: 3px;
     background-color: #fffee2;
 }
+
+#comment_disable{
+    margin: 1rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#comment_disable strong{
+    display: inline-block;
+    padding: 1rem;
+    border: 2px solid #ff7f50;
+    border-radius: 3px;
+    background-color: #fffee2;
+}

@@ -1,14 +1,14 @@
 <?php get_header(); ?>
 <hgroup id="header_main">
-        <h1>News</h1>
+        <h1>Announce</h1>
     </hgroup>
     <div id="breadcrumb">
-        <a href="<?php echo home_url(); ?>">Home</a> &gt; News
+        <a href="<?php echo home_url(); ?>">Home</a> &gt; Announce
     </div>
 </header>
 
 <main>
-    <h2>News</h2>
+    <h2><?php echo get_post_type_object(get_post_type())->label; ?></h2>
     <section id="news_list">
         <ul>
         <?php if( have_posts() ) : ?>

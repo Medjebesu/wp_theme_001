@@ -3,15 +3,19 @@
         <h1><?php the_title(); ?></h1>
     </hgroup>
     <div id="breadcrumb">
-        <?php if (is_page() /* 親ページ判定 */) : ?>
-        <a href="<?php echo home_url(); ?>">Home</a> &gt; <?php the_title(); ?>
-        <?php else : /* 子ページ判定 */?>
-            <?php if ( have_posts() ) : ?>
-            <?php while ( have_posts() ) : the_post(); ?>
-            <a href="<?php echo home_url(); ?>">Home</a> &gt; <a href="#">※親ページ</a> &gt; <?php the_title(); ?>
-            <?php endwhile; ?>
-            <?php endif; ?>
-        <?php endif; ?>
+        <?php 
+            $this_post = get_post(get_the_ID());
+            $result = '<a href="' . home_url() . '">Home</a>';
+
+            if($this_post->post_parent){
+                $ancestors = array_reverse($this_post->ancestors);
+
+                foreach($ancestors as $value){
+                    $result = $result . ' &gt; <a href="' . get_page_link($value) . '">'. get_the_title($value) . '</a>';
+                }
+            }
+            echo ($result . ' &gt; '. $this_post->post_title);
+        ?>
     </div>
 </header>
 
