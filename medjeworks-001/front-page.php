@@ -41,7 +41,7 @@
 
     <h2>Contents</h2>
     <section id="contents_list">
-        <?php get_template_part('load', 'contentslist'); ?>
+        <?php get_template_part('load', 'bloglist'); ?>
     </section>
 </main>
 <?php get_footer(); ?>
