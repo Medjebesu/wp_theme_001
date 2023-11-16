@@ -3,35 +3,53 @@
         <h1><?php the_title(); ?></h1>
     </hgroup>
     <div id="breadcrumb">
-        <a href="<?php echo home_url(); ?>">Home</a> &gt; <a href="<?php echo home_url() . '/content';?>">Content</a> &gt; <?php the_title(); ?>
+        <a href="<?php echo home_url(); ?>">Home</a> &gt; Contents &gt; <?php the_title(); ?>
     </div>
 </header>
 
 <main>
     <div id="content-wrapper">
-        <?php if ( have_posts() ) : ?>
-        <?php while ( have_posts() ) : the_post(); ?>
-
         <section id="contents_list">
-            <ul>
+            <h3>コンテンツ一覧</h3>
             <?php
-                $cat_args = [
-                    'title_li' => '', // 見出し削除
-                ];
-                wp_list_categories($cat_args);
+            $args = array(
+                'post_type' => 'content',
+                'order'     => 'DESC'
+            );
+            $query_posts = new WP_Query( $args );
+
+            if( $query_posts->have_posts() ): 
             ?>
+            <ul>
+                <?php while( $query_posts->have_posts() ): $query_posts->the_post(); ?>
+                <li>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </li>
+                <?php endwhile; ?>
             </ul>
+            <?php
+                wp_reset_postdata();
+            endif;
+            ?>
         </section>
 
+        <?php
+        $field_url = get_field('content_url');
+        if($field_url == get_template_directory_uri() + '/--contents_top'): 
+        ?>
         <section id="content_area">
-            <iframe src="<?php echo get_field('content_url');?>"></iframe>
+            <p><?php echo get_field('description');?></p>
         </section>
+        <?php else: ?>
+        <section id="content_area">
+            <iframe src="<?php echo $field_url;?>"></iframe>
+        </section>
+
         <section id="content_description">
             <p><?php echo get_field('description');?></p>
         </section>
-
-        <?php endwhile; ?>
         <?php endif; ?>
+
     </div>
 
     <aside id="web_adds">
