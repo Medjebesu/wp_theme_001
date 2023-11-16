@@ -39,28 +39,27 @@
 
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-    <div class="wrapper">
-        <header>
-            <nav>
-                <div id="nav_logo">
-                    <?php
-                    if(has_custom_logo()) : the_custom_logo();
-                    ?>
-                    <?php else :?>
-                        <a href="<?php echo home_url(); ?>">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="MedjeWorks">
-                        </a>
-                    <?php endif; ?>
-                    <div id="logo_back_decoration"></div>
-                </div>
-
+    <header>
+        <nav>
+            <div id="nav_logo">
                 <?php
-                /* ナビゲーションメニュー */
-                $args = [
-                    'theme_location' => 'header-navigation',
-                    'menu_class' => '',
-                    'container' => false,
-                ];
-                wp_nav_menu($args);
+                if(has_custom_logo()) : the_custom_logo();
                 ?>
-            </nav>
+                <?php else :?>
+                <a href="<?php echo home_url(); ?>">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.svg" alt="MedjeWorks">
+                </a>
+                <?php endif; ?>
+                <div id="logo_back_decoration"></div>
+            </div>
+
+            <?php
+            /* ナビゲーションメニュー */
+            $args = [
+                'theme_location' => 'header-navigation',
+                'menu_class' => '',
+                'container' => false,
+            ];
+            wp_nav_menu($args);
+            ?>
+        </nav>

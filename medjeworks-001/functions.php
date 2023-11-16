@@ -94,6 +94,10 @@ function add_stylesheet() {
         wp_register_style('blog-style', get_bloginfo('template_directory') . '/assets/css/page/contact.css');
         wp_enqueue_style('blog-style');
     }
+    elseif(is_page('contents_top')){
+        wp_register_style('contents-style', get_bloginfo('template_directory') . '/assets/css/contents.css');
+        wp_enqueue_style('contents-style');
+    }
 }
 add_action( 'wp_print_styles', 'add_stylesheet');
 ?>
