@@ -8,10 +8,10 @@
 
         if( $query_posts->have_posts() ): 
         ?>
-        <ul class="content_card_list blog_list">
+        <ul class="blog_card_list blog_list">
             <?php while( $query_posts->have_posts() ): $query_posts->the_post(); ?>
             <li>
-                <div class="content_card">
+                <div class="blog_card">
                     <a href="<?php the_permalink(); ?>">
 
                     <?php if( has_post_thumbnail() ) : ?>

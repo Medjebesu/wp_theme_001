@@ -38,7 +38,7 @@
 
 
 /* 各セクション内設定 */
-.blog_list{ /* .content_card_listの調整 */
+.blog_list{ /* .blog_card_listの調整 */
     box-sizing: border-box;
     max-width: 100%;
     grid-template-columns: repeat(auto-fit, 200px);
