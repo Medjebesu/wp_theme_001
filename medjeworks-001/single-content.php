@@ -3,7 +3,7 @@
         <h1><?php the_title(); ?></h1>
     </hgroup>
     <div id="breadcrumb">
-        <a href="<?php echo home_url(); ?>">Home</a> &gt; Contents &gt; <?php the_title(); ?>
+        <a href="<?php echo home_url(); ?>">Home</a> &gt; <a href="<?php echo home_url() . '/contents_top' ?>">Contents</a> &gt; <?php the_title(); ?>
     </div>
 </header>
 
@@ -33,22 +33,12 @@
             ?>
         </section>
 
-        <?php
-        $field_url = get_field('content_url');
-        if($field_url == get_template_directory_uri() + '/--contents_top'): 
-        ?>
         <section id="content_area">
-            <p><?php echo get_field('description');?></p>
+            <iframe src="<?php echo get_field('content_url');?>"></iframe>
         </section>
-        <?php else: ?>
-        <section id="content_area">
-            <iframe src="<?php echo $field_url;?>"></iframe>
-        </section>
-
         <section id="content_description">
             <p><?php echo get_field('description');?></p>
         </section>
-        <?php endif; ?>
 
     </div>
 
