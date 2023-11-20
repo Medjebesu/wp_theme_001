@@ -1,8 +1,10 @@
-#news_list{
-    margin: 40px;
+#news_list {
+    padding: 0 1rem;
 }
+
 #news_list ul{
     list-style-type: none;
+    padding: 0;
 }
 #news_list ul li {
     padding: 20px 0 20px 0;

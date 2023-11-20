@@ -48,7 +48,7 @@ td{
     padding: 5px 10px;
 }
 
-.content_card_list{
+.blog_card_list{
     max-width: 1320px;
     margin: auto;
     padding-left: 0;
@@ -62,7 +62,7 @@ td{
     justify-content: center;
 }
 
-.content_card_list > li{
+.blog_card_list > li{
     width: 100%;
     height: 100%;
     background-color: #088551;
@@ -70,20 +70,20 @@ td{
     box-shadow: rgba(0,0,0,0.7) 3px 3px 10px ;
 }
 
-.content_card{
+.blog_card{
     padding: 1rem;
 }
 
-.content_card a{
+.blog_card a{
     color: #ffffff;
     text-decoration: none;
 }
 
-.content_card a:hover{
+.blog_card a:hover{
     text-decoration: underline;
 }
 
-.content_card img{
+.blog_card img{
     display: block;
     box-sizing: border-box;
     width: 100%;
