@@ -5,7 +5,7 @@
     grid-template-columns: clamp(14rem, 20vw, 24rem) auto;
     grid-template-rows: repeat(auto-fit);
 }
-#contents_list {
+#contents_side_list {
     grid-column: 1;
     grid-row: 1/4;
 }
@@ -27,15 +27,19 @@ main {
     padding: 0;
 }
 
-#contents_list {
+main > h2{
+    padding: 1rem 2.5rem;
+}
+
+#contents_side_list {
     box-sizing: border-box;
     padding: 0 1rem;;
 }
 
-#contents_list > h3{
+#contents_side_list > h3{
     font-size: clamp(1.2rem, 1.8vw, 2.4rem);
 }
-#contents_list > ul > li{
+#contents_side_list > ul > li{
     font-size: clamp(1.0rem, 1.5vw, 2.0rem);
 }
 
@@ -53,4 +57,51 @@ main {
 #content_description {
     padding: 1rem;
     font-size: clamp(1.0rem, 1.5vw, 2.0rem);
+}
+
+.content_card_list{
+    max-width: 1320px;
+    margin: 1rem 2.5rem;
+    padding-left: 0;
+    text-align: center;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, clamp(15em, 25vw, 21em));
+    column-gap: 20px;
+    row-gap: 30px;
+    justify-content: center;
+}
+
+.content_card_list > li{
+    aspect-ratio: 2/3;
+    background-color: #088551;
+    border-radius: 2%;
+    padding: 1rem;
+    box-shadow: rgba(0,0,0,0.7) 3px 3px 10px ;
+}
+
+.content_card{
+    font-size: clamp(1em, 1.8vw, 1.5em);
+}
+
+.content_card a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.content_card a:hover{
+    text-decoration: underline;
+    color: #FFA629;
+}
+
+.content_card img{
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: darkgrey;
 }

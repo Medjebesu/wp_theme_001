@@ -8,7 +8,7 @@
 
         if( $query_posts->have_posts() ): 
         ?>
-        <ul class="blog_card_list blog_list">
+        <ul class="blog_card_list">
             <?php while( $query_posts->have_posts() ): $query_posts->the_post(); ?>
             <li>
                 <div class="blog_card">

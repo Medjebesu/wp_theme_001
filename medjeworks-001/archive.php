@@ -9,7 +9,7 @@
     <div id="blog-wrapper">
         <section id="blog_content">
             <?php if( have_posts() ) : ?>
-            <ul class="blog_card_list blog_list">
+            <ul class="blog_card_list">
                 <?php while( have_posts() ) : the_post(); ?>
                 <li>
                     <div class="blog_card">

@@ -91,15 +91,28 @@ add_shortcode('loadPHP', 'loadThemePHP');
 function add_stylesheet() {
     // 問い合わせの確認ページと完了ページに同一スタイル適用
     if (is_page('confirm') or is_page('thanks')) {
-        wp_register_style('blog-style', get_bloginfo('template_directory') . '/assets/css/page/contact.css');
-        wp_enqueue_style('blog-style');
+        wp_register_style('contact-style', get_bloginfo('template_directory') . '/assets/css/page/contact.css');
+        wp_enqueue_style('contact-style');
     }
     elseif(is_page('contents_top')){
-        wp_register_style('contents-style', get_bloginfo('template_directory') . '/assets/css/contents.css');
+        wp_register_style('contents-style', get_bloginfo('template_directory') . '/assets/css/content.css');
         wp_enqueue_style('contents-style');
     }
 }
 add_action( 'wp_print_styles', 'add_stylesheet');
+?>
+
+<?php
+/*
+ * 検索結果のフィルター設定
+ */
+function SearchFilter( $query ) {
+    if ( $query -> is_search ) {
+        $query -> set( 'post_type', 'post' );
+    }
+    return $query;
+}
+add_filter( 'pre_get_posts', 'SearchFilter' );
 ?>
 
 <?php

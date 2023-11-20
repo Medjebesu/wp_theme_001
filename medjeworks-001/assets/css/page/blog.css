@@ -1,7 +1,7 @@
 /* 外枠grid設定 */
 #blog-wrapper {
     display: grid;
-    column-gap: 20px;
+    column-gap: 0.5rem;
     grid-template-columns: auto max(20vw, 240px);
 }
 #blog-wrapper h2{

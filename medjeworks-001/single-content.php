@@ -9,7 +9,7 @@
 
 <main>
     <div id="content-wrapper">
-        <section id="contents_list">
+        <section id="contents_side_list">
             <h3>コンテンツ一覧</h3>
             <?php
             $args = array(
