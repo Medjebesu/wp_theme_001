@@ -51,7 +51,6 @@ main > h2{
 #content_area > iframe {
     box-sizing: border-box;
     width: clamp(720px, 125vh, 100%);
-    aspect-ratio: 4/3;
     border:none;
 }
 

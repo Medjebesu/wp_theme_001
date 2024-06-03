@@ -33,13 +33,12 @@
             ?>
         </section>
 
-        <section id="content_area">
-            <iframe src="<?php echo get_field('content_url');?>"></iframe>
+        <section id="content_area" style="<?php echo get_field('additional_css');?>">
+            <iframe src="<?php echo get_field('content_url');?>" style="<?php echo get_field('additional_css');?>"></iframe>
         </section>
         <section id="content_description">
             <p><?php echo get_field('description');?></p>
         </section>
-
     </div>
 
     <aside id="web_adds">
